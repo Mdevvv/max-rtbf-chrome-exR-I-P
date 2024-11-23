@@ -1,1 +1,1 @@
-# sl2k-l3-max-rtbf-chrome-ex
+# max-rtbf-chrome-ex
