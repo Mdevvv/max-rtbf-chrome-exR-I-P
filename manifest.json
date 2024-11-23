@@ -1,0 +1,30 @@
+{
+    "manifest_version": 2,
+    "name": "sl2k l3 ripper",
+    "version": "1.0",
+    "version_name": "1.0",
+    "icons": {
+        "128": "icons/icon.png"
+    },
+    "permissions": [
+        "storage",
+        "webRequest",
+        "webRequestBlocking",
+        "<all_urls>",
+        "activeTab",
+        "storage",
+        "tabs",
+        "contextMenus",
+        "http://*/*",
+        "https://*/*"
+    ],
+    "browser_action": {
+        "default_title": "sl2k l3 ripper",
+        "default_popup": "popup.html"
+    },
+    "background": {
+        "scripts": ["background.js"],
+        "persistent": true
+    },
+    "content_security_policy": "script-src 'self' https://cdn.jsdelivr.net 'wasm-eval' 'unsafe-eval'; object-src 'self';"
+  }

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sl2k l3 ripper</title>
+    <link rel="shortcut icon" href="icons/icon.png">
+</head>
+<style>
+    body {
+        position: relative;
+        font-family: Robot, Arial, Helvetica, sans-serif;
+        background-color: #1a192d;
+        background-size: cover;
+        color: #fff;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        padding: 0;
+        margin: 0;
+        width: 800px;
+        height: 600px;
+        overflow: hidden;
+    }
+
+    body::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 800px;
+        height: 600px;
+        background: #1a192d url('icons/bg.png') no-repeat left top;
+        opacity: 0.5;
+        z-index: -1;
+    }
+
+    body > * {
+        margin: 8px 0;
+    }
+    h1 {
+        margin: 20px;
+        font-weight: bold;
+
+    }
+    .label {
+        color: rgb(223, 219, 94);
+        margin: 10px;
+    }
+    textarea, input {
+        background: #0000007a;
+        width: 80%;
+        text-align: center;
+        color: rgb(223, 94, 94);
+    }
+    textarea {
+        height: 135px;
+    }
+    input::placeholder {
+        color: rgba(255, 255, 255, 0.614);
+    }
+    #scheme {
+        margin: 20px 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        width: 80%;
+    }
+</style>
+<body>
+    <h1>sl2k l3 ripper</h1>
+    <p class="label">MPD :</p>
+    <textarea id="mpd" disabled>no video on page</textarea>
+    <p class="label">License :</p>
+    <textarea id="license" disabled>no license on page</textarea>
+    <p class="label">Name :</p>
+    <input type="text" id="name" placeholder="name (without .mkv)"></input>
+    <div id="scheme">
+        <select id="schemeSelect">
+            <option value="max-vod">max (vod)</option>
+            <option value="rtbf">rtbf-auvio</option>
+            <option value="abxplore-vod">abxplore (vod)</option>
+            <option value="abxplore-live">abxplore (live)</option>
+        </select>
+        <input id="commandRes" value="write the name before" disabled></input>
+    </div>
+</body>
+<script src="https://cdn.jsdelivr.net/pyodide/v0.26.4/full/pyodide.js"></script>
+<script src="popup.js"></script>
+</html>
